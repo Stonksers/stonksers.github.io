@@ -14,5 +14,15 @@ body {
 
 #landing-body {
     text-align: center;
-    font-size: xx-large;
+    font-size: large;
+    padding-top: 2%;
+}
+
+.section-box {
+    border: 2px solid white;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 1%;
 }
