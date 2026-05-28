@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+#hero-content {
+    opacity: 0;
+    transition: opacity 1.0s ease-in-out;
+}
+
+#hero-content.visible {
+    opacity: 1;
+}
