@@ -29,9 +29,6 @@ jobs:
       - name: Run build
         run: npm run build
 
-      - name: Check output exists
-        run: ls -la dist/css/
-
       - name: Deploy to GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
