@@ -32,7 +32,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist/css
+          path: .
           
   deploy:
     needs: build
