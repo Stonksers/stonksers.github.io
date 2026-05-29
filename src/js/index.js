@@ -1,6 +1,12 @@
 // Fade-in animation for the hero section
-const heroContent = document.querySelectorAll('.hero-content');
-heroContent.forEach(c => c.classList.add('visible'));
+window.addEventListener('load', () => {
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+            const heroContent = document.querySelectorAll('.hero-content');
+            heroContent.forEach(c => c.classList.add('visible'));
+        });
+    });
+});
 
 // Fade-in animation for elements when scrolling
 const observer = new IntersectionObserver((entries) => {
