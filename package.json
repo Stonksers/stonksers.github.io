@@ -1,11 +1,15 @@
 {
   "dependencies": {
     "@tailwindcss/cli": "^4.3.0",
+    "cpy-cli": "^7.0.0",
     "tailwindcss": "^4.3.0"
   },
   "scripts": {
-    "dev": "tailwindcss -i ./src/css/input.css -o ./dist/css/output.css --watch",
-    "build": "tailwindcss -i ./src/css/input.css -o ./dist/css/output.css --minify"
+    "build:css": "tailwindcss -i ./src/css/input.css -o ./dist/css/output.css --minify",
+    "build:images": "cpy \"src/images/**/*\" dist/images --parents",
+    "build": "npm run build:css && npm run build:images",
+    "dev:css": "tailwindcss -i ./src/css/input.css -o ./dist/css/output.css --watch",
+    "dev": "npm run build:images && npm run dev:css"
   },
   "devDependencies": {
     "typescript": "^6.0.3"
