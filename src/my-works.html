@@ -17,30 +17,64 @@
         <a href="/index.html" class="text-2xl font-bold">
             <h1>My Digital Portfolio</h1>
         </a>
-        <div class="flex gap-10 text-lg">
+        <div class="flex gap-8 text-lg">
             <a href="/src/my-works.html">
                 <h1>My Works</h1>
             </a>
+            <a href="/src/certifications.html">
+                <h1>Certifications</h1>
+            </a>
         </div>
     </div>
-    <div class="text-center text-base p-4 m-5 reveal">
-        <h1 class="font-bold mt-5 mb-15 text-4xl">My Works</h1>
-        <div class="bg-[#1e2333] border border-white/5 shadow-lg shadow-black/20 p-4 max-w-5xl mx-auto">
+    <div class="text-center text-base p-4 m-5">
+        <h1 class="font-bold mt-5 mb-15 text-4xl reveal">My Works</h1>
+        <div class="bg-[#1e2333] border border-white/5 shadow-lg shadow-black/20 p-4 max-w-5xl mx-auto mb-10 reveal">
             <div class="mx-auto max-w-4xl">
                 <h1 class="font-bold text-2xl">Daily ZPIA Pipeline</h1>
                 <p class="mx-auto my-6 text-left">
-                    ZPIA is a compiled dataset of track defects spotted by patrollers and whether the defects have been
-                    fixed. Everyday, there are two sets of data that make up the full ZPIA dataset: Morning and PDSS. My
-                    task was to clean and combine the two datasets and output the result to an SQL database. This task
+                    ZPIA is a compiled dataset of historical track defects spotted by patrollers and whether the defects
+                    have
+                    been
+                    fixed. Everyday, there are two sets of data that make up the full ZPIA dataset: Morning and
+                    PDSS. My
+                    task was to clean and combine the two datasets and output the result to an SQL database. This
+                    task
                     was
-                    to be fully done within the Microsoft Azure cloud environment, using an Azure Data Factory pipeline,
+                    to be fully done within the Microsoft Azure cloud environment, using an Azure Data Factory
+                    pipeline,
                     Azure Synapse Analytics notebook and Data Warehouse, and Azure Data Lake Storage.
                 </p>
                 <img class="text-left w-full" src="/dist/images/zpia_pipeline.png" alt="Image of ZPIA Daily Pipeline">
                 <p class="m-6">Flow of ZPIA Daily Pipeline</p>
             </div>
-
         </div>
+        <div class="bg-[#1e2333] border border-white/5 shadow-lg shadow-black/20 p-4 max-w-5xl mx-auto mb-10 reveal">
+            <div class="mx-auto max-w-4xl">
+                <h1 class="font-bold text-2xl">Enhancing Track Defect Object Detection Model</h1>
+                <p class="mx-auto my-6 text-left">
+                    This task is still currently incomplete as of writing. The main objective is to enhance on an
+                    object detection model for track defects that was trained by a previous intern. Unlike object
+                    recognition, object detection tells us both what the object is (classification) and where in the
+                    image it is (localisation).
+                    However, in my lessons in TP, only object recognition was taught. Although the concepts do carry
+                    over, the added dimension of localisation in object detection models is
+                    still a hurdle I need to overcome. The detection model trained by the previous intern was
+                    trained using a YOLO (You Only Look Once) model, which uses bounding boxes to locate the object in
+                    the image. One major challenge will be the data labelling process, as the raw images are not
+                    labelled. The track images are collected by an Automatic Track Inspection (ATI) system, which
+                    captures images of the track through the entire rail network. As such, not only will there be a lot
+                    of images without defects, there may be more than one defect per image. Data from the ZPIA Daily
+                    pipeline can be used to help with the filtering and labelling process, but the labelling still needs
+                    to be done manually.
+                </p>
+                <img class="text-left w-full mb-5" src="/dist/images/yolo_results.png" alt="Results from a test run of YOLO training">
+                <p class="m-6 mb-15">Results from a test run of YOLO training</p>
+                <img class="text-left w-full mb-5" src="/dist/images/confusion_matrix_normalized.png" alt="Normalised confusion matrix">
+                <p class="m-6 mb-15">Normalised confusion matrix</p>
+                
+            </div>
+        </div>
+    </div>
     </div>
     <footer class="flex justify-center mb-5">
         <a href="mailto:erosyap123@gmail.com" class="mx-5">
