@@ -7,6 +7,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="/dist/css/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>My Works - Digital Portfolio</title>
@@ -18,41 +21,74 @@
             <h1>My Digital Portfolio</h1>
         </a>
         <div class="flex gap-8 text-lg">
-            <a href="/src/my-works.html">
-                <h1>My Works</h1>
+            <a href="/src/my-works.html" class="px-4 py-2 rounded-lg hover:bg-white/10 transition-colors">
+                My Works
             </a>
-            <a href="/src/certifications.html">
-                <h1>Certifications</h1>
+            <a href="/src/certifications.html" class="px-4 py-2 rounded-lg hover:bg-white/10 transition-colors">
+                Certifications
             </a>
         </div>
     </div>
-    <div class="text-center text-base p-4 m-5">
+    <div class="text-center text-base p-4 m-5 leading-relaxed">
         <h1 class="font-bold mt-5 mb-15 text-4xl reveal">My Works</h1>
         <div class="bg-[#1e2333] border border-white/5 shadow-lg shadow-black/20 p-4 max-w-5xl mx-auto mb-10 reveal">
             <div class="mx-auto max-w-4xl">
                 <h1 class="font-bold text-2xl">Daily ZPIA Pipeline</h1>
                 <p class="mx-auto my-6 text-left">
                     ZPIA is a compiled dataset of historical track defects spotted by patrollers and whether the defects
-                    have
-                    been
-                    fixed. Everyday, there are two sets of data that make up the full ZPIA dataset: Morning and
-                    PDSS. My
-                    task was to clean and combine the two datasets and output the result to an SQL database. This
-                    task
-                    was
-                    to be fully done within the Microsoft Azure cloud environment, using an Azure Data Factory
-                    pipeline,
-                    Azure Synapse Analytics notebook and Data Warehouse, and Azure Data Lake Storage.
+                    have been fixed. Everyday, there are two sets of data that make up the full ZPIA dataset: Morning
+                    and PDSS. My task was to clean and combine the two datasets and output the result to an SQL
+                    database. This task was to be fully done within the Microsoft Azure cloud environment, using an
+                    Azure Data Factory pipeline, Azure Synapse Analytics notebook and Data Warehouse, and Azure Data
+                    Lake Storage.
                 </p>
-                <img class="text-left w-full" src="/dist/images/zpia_pipeline.png" alt="Image of ZPIA Daily Pipeline">
-                <p class="m-6">Flow of ZPIA Daily Pipeline</p>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img class="text-left w-full" src="/dist/images/zpia_pipeline.png"
+                                alt="Image of ZPIA Daily Pipeline">
+                        </div>
+                        <div class="flip-card-back">
+                            <img class="text-left w-full" src="/dist/images/zpia_service_diagram.png"
+                                alt="Image of ZPIA Daily Pipeline">
+                        </div>
+                    </div>
+                </div>
+                <p class="text-sm m-6">Flow of ZPIA Daily Pipeline</p>
+                <p class="mx-auto my-6 text-left">
+                    By working on this task I have better familiarised myself with the Microsoft Azure environment and
+                    working in a collaborative Cloud Development Environment (CDE). Working on this task while receiving
+                    training has allowed me to learn about the track infrastructure of the MRT lines and the overall
+                    maintenance process, which will be
+                    useful information for future tasks. I learnt and made use of relevant knowledge to complete this
+                    task, like how the overall ZPIA system operates and what is represented in the data. I also learnt
+                    and used various skills, like Python, PySpark, data engineering, and using various
+                    Azure services. As this is my first time using the Azure environment and the PySpark library, it is
+                    especially important to go into this task with the right attitude. To learn effectively, I had to be
+                    patient and take the time to understand the required tools for the task, as well as be meticulous
+                    about my work by thoroughly checking the code for errors or any faulty output. Knowledge of the data
+                    is important not only for this task, but also for future tasks that may make use of the pipeline
+                    output. As Python is the main programming language for all activities relating to data engineering
+                    in Synapse Analytics, mastery over Python and the PySpark library (Apache Spark, similar to Pandas)
+                    is important.
+                </p>
+                <p class="mx-auto my-6 text-left">
+                    In the end, using all
+                    acquired knowledge, skills, and attitude, the ZPIA Daily pipeline was
+                    working, albeit with a few errors and bugs. Looking back, I should have been more careful during
+                    development and properly inspected the data before shipping the pipeline to production. This would
+                    have saved time debugging and trying to find the problem in the code, as well as get the pipeline
+                    fully operational sooner for my colleagues to use. Overall, this task
+                    has helped me to grow in terms of being more familiar with the development process and the tools
+                    that are available to me, as well as being more thorough in my work.
+                </p>
             </div>
         </div>
         <div class="bg-[#1e2333] border border-white/5 shadow-lg shadow-black/20 p-4 max-w-5xl mx-auto mb-10 reveal">
             <div class="mx-auto max-w-4xl">
                 <h1 class="font-bold text-2xl">Enhancing Track Defect Object Detection Model</h1>
                 <p class="mx-auto my-6 text-left">
-                    This task is still currently incomplete as of writing. The main objective is to enhance on an
+                    This task is still incomplete as of writing. The main objective is to enhance on an
                     object detection model for track defects that was trained by a previous intern. Unlike object
                     recognition, object detection tells us both what the object is (classification) and where in the
                     image it is (localisation).
@@ -65,15 +101,82 @@
                     captures images of the track through the entire rail network. As such, not only will there be a lot
                     of images without defects, there may be more than one defect per image. Data from a defect list can
                     be used to help with the filtering and labelling process, but the labelling still needs
-                    to be done manually.
+                    to be done manually. Research on other object detection models is still to be done to try to find a
+                    way to simplify the labelling process. This project is likely to be incorporated as my Major
+                    Project.
                 </p>
+                <img class="text-left w-full mb-5" src="/dist/images/bvsys_workflow.png"
+                    alt="Workflow of Bvsys track image to YOLO training">
+                <p class="text-sm m-6 mb-15">Workflow of Bvsys track image to YOLO training</p>
+                <pre class="mx-auto my-6 text-left"><code># model = YOLO('./drive/MyDrive/YOLO Training/results/YOLO11l_HighRes_Patrol_EB_WB/dataset/weights/best.pt')
+#Training
+
+from ultralytics import YOLO
+
+# model = YOLO('yolo26m.pt')
+model = YOLO('/content/drive/MyDrive/YOLO Training/test/test-ver3-stage1/weights/last.pt')
+
+def train_model_colab(epochs, imgsz, batch):
+    # Train
+    results = model.train(
+        data=yaml_path,
+        project='/content/drive/MyDrive/YOLO Training/test',
+        name='test-ver3-stage1',
+        exist_ok=True,
+        resume=True,
+        epochs=epochs,
+        patience=30,
+        imgsz=imgsz,
+        batch=batch,
+        amp=True,
+        seed=42,
+        mosaic=1.0,
+        mixup=0.3,
+        copy_paste=0.3,
+        erasing=0.2,
+        hsv_h=0.0,
+        hsv_s=0.0,
+        hsv_v=0.0,
+        fliplr=0.5,
+        flipud=0.0,
+        scale=0.5,
+        translate=0.3,
+        shear=0.0,
+        degrees=0.0,
+        perspective=0.0,
+        close_mosaic=20,
+        multi_scale=0.4,
+        box=10.0,
+        conf=0.001
+    )
+
+# Run the training
+train_model_colab(100, 768, 4)
+# train_model_colab(20, 960, 2)</code></pre>
+                <p class="text-sm m-6 mb-15">Code snippet of test run training code</p>
                 <img class="text-left w-full mb-5" src="/dist/images/yolo_results.png"
                     alt="Results from a test run of YOLO training">
-                <p class="m-6 mb-15">Results from a test run of YOLO training</p>
+                <p class="text-sm m-6 mb-15">Results from a test run of YOLO training</p>
                 <img class="text-left w-full mb-5" src="/dist/images/confusion_matrix_normalized.png"
                     alt="Normalised confusion matrix">
-                <p class="m-6 mb-15">Normalised confusion matrix</p>
-
+                <p class="text-sm m-6 mb-15">Normalised confusion matrix</p>
+                <p class="mx-auto my-6 text-left">
+                    Though still incomplete, I still managed to broaden my understanding of computer vision by learning
+                    about object detection. In the work done so far, I have learnt and applied knowledge of the object
+                    detection, YOLO, deep learning, and computer vision. This task requires me to develop and apply
+                    skills like working with Pytorch, Ultralytics, and Albumentations libraries, as well as applying
+                    image augmentation. Working on any machine learning and deep learning task also requires the right
+                    attitude to develop a good model, like being patient about model training, trial and error,
+                    and experimentation, as well as being adaptive about the method used for the machine learning task
+                    to ensure the solution fits the problem statement and dataset. This task will help me grow in terms
+                    of my job role by helping me better understand some of the backend processes regarding track defects
+                    and maintenance, as well as helping me further familiarise myself with the Azure environment by
+                    eventually deploying the model training process into Azure Machine Learning. Knowledge of computer
+                    vision is important for my job role as the MRT tracks are very long and tedious to inspect manually,
+                    and patrollers may miss some defects due to human error. Likewise, dealing with image data is an
+                    important skill for computer vision. Data augmentation can effectively help increase the size of the
+                    dataset, in case the true size of the dataset may be limited.
+                </p>
             </div>
         </div>
     </div>

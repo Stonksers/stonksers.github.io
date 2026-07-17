@@ -15,6 +15,12 @@ const observer = new IntersectionObserver((entries) => {
             entry.target.classList.add('visible');
         }
     });
-}, { threshold: 0.2 });
+}, { threshold: 0 });
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+document.querySelectorAll('.flip-card').forEach(card => {
+    card.addEventListener('click', () => {
+        card.classList.toggle('flipped');
+    });
+});
